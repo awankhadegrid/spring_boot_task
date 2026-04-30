@@ -1,17 +1,20 @@
 package com.TaskProject.Test.Test1;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 
 @Configuration
 class ProjectConfig {
 
-    @Bean("interfaceBean")
+    @Bean("bean1")
     public Foo interfaceBean() {
-        System.out.println("this is interface bean");
         return new FooImpl();
     }
-    @Bean("concreteBean")
+
+    @Bean("bean2")
+    @Primary
     public FooImpl concreteBean() {
         return new FooImpl();
     }

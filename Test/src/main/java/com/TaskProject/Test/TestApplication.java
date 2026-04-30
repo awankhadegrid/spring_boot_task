@@ -2,6 +2,7 @@ package com.TaskProject.Test;
 
 import com.TaskProject.Test.Test1.MainService;
 import com.TaskProject.Test.test2.MainConfig;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -17,5 +18,6 @@ public class TestApplication {
 
         MainConfig mainConfig = context.getBean(MainConfig.class);
         mainConfig.mainProcess();
+
     }
 }
