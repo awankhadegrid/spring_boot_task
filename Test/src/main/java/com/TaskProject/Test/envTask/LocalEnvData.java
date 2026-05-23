@@ -3,6 +3,8 @@ package com.TaskProject.Test.envTask;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
+import java.time.LocalDateTime;
+
 @Component
 @ConfigurationProperties(prefix = "app")
 public class LocalEnvData {
@@ -12,6 +14,15 @@ public class LocalEnvData {
     private String message;
     private String dbName;
     private String url;
+    private LocalDateTime dateTime;
+
+    public LocalDateTime getDateTime() {
+        return dateTime;
+    }
+
+    public void setDateTime(LocalDateTime dateTime) {
+        this.dateTime = dateTime;
+    }
 
     public String getEnv() {
         return env;
